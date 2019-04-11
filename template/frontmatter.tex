@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%
+\input{settings.tex}
+\maketitle
+\thispagestyle{empty}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Empty page after title page.
+% %
+% \hbox{}\par\vfill\centerline%
+%    {THIS PAGE INTENTIONALLY LEFT BLANK}%
+%    \vfill\thispagestyle{empty}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+%
+\noindent
+\begin{minipage}{\linewidth - 30pt}
+  \vspace*{-6pt}
+  \begin{abstract}
+    \thispagestyle{plain}          % add page number
+    \vspace*{6pt}
+    \setlength{\parskip}{1em}
+    \subimport{../frontmatters/}{abstract.tex}
+  \end{abstract}
+
+  \begin{keywords}
+    \subimport{../frontmatters/}{keywords.tex}
+  \end{keywords}
+\end{minipage}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sammanfattning (Abstract på svenska)
+%
+
+\chapter*{Sammanfattning}
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{\numberline{}Sammanfattning}%
+\subimport{../frontmatters/}{sammanfattning.tex}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgement
+%
+\chapter*{Acknowledgements}
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{\numberline{}Acknowledgements}%
+\subimport{../frontmatters/}{acknowledgments.tex}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contents
+%
+\tableofcontents
+\thispagestyle{plain}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of Figures
+%
+
+\listoffigures
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of Tables
+%
+
+\listoftables
+\cleardoublepage
